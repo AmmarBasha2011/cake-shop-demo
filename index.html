@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>كيكة وتورت | اطلب أونلاين</title>
+<meta name="description" content="كيكات وتورتات وحلويات طازة — اطلب من موبايلك واختار الشكل والكلام اللي على الكيكة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        choc:{ 50:'#fbf6f1', 100:'#f5e9dc', 200:'#ead2b8', 300:'#ddb48c', 400:'#cd9260', 500:'#b97440', 600:'#9c5b31', 700:'#7d472a', 800:'#5f3722', 900:'#412619' },
+        blush:{ 100:'#fdf2f6', 300:'#f7c6da', 500:'#e56ba0' }
+      },
+      fontFamily: { sans: ['Cairo','sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+  body{font-family:'Cairo',sans-serif;background:#fbf6f1;color:#412619}
+  .grad-text{background:linear-gradient(135deg,#cd9260 0%,#b97440 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .grad-bg{background:linear-gradient(135deg,#cd9260 0%,#b97440 100%)}
+  .card{background:#fff;border:1px solid #f5e9dc;box-shadow:0 4px 22px -8px rgba(156,91,49,.16)}
+  .card:hover{border-color:#ddb48c;box-shadow:0 14px 38px -10px rgba(156,91,49,.3)}
+  .reveal{opacity:0;transform:translateY(24px);transition:.7s cubic-bezier(.2,.7,.3,1)}
+  .reveal.in{opacity:1;transform:none}
+  .float{animation:fl 5.5s ease-in-out infinite}
+  @keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .filter-btn.active{background:linear-gradient(135deg,#cd9260 0%,#b97440 100%);color:#fff;font-weight:900}
+  ::-webkit-scrollbar{width:10px}
+  ::-webkit-scrollbar-track{background:#f5e9dc}
+  ::-webkit-scrollbar-thumb{background:#b97440;border-radius:8px}
+</style>
+</head>
+<body class="antialiased selection:bg-choc-200 selection:text-choc-900">
+
+<!-- HEADER -->
+<header id="nav" class="fixed top-0 inset-x-0 z-50 bg-white/88 backdrop-blur-xl border-b border-choc-100 transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-2xl grad-bg grid place-items-center shadow-lg shadow-choc-500/30">
+        <span class="text-white font-black text-2xl leading-none">ك</span>
+      </div>
+      <div>
+        <p class="font-black text-lg leading-none grad-text">كيكة وتورت</p>
+        <p class="text-[11px] text-choc-700/70 font-semibold mt-1">اطلبي أونلاين</p>
+      </div>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm font-bold text-choc-800">
+      <a href="#products" class="hover:text-choc-500 transition">الكيكات</a>
+      <a href="#order" class="hover:text-choc-500 transition">اطلبي</a>
+      <a href="#contact" class="hover:text-choc-500 transition">تواصلي معانا</a>
+    </nav>
+    <a href="#order" class="grad-bg text-white font-black px-5 py-2.5 rounded-xl text-sm hover:opacity-90 transition shadow-lg shadow-choc-500/30">اطلبي دلوقتي</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="relative pt-32 pb-24 overflow-hidden">
+  <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-choc-200/50 blur-3xl"></div>
+  <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-blush-100 blur-3xl"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="inline-flex items-center gap-2 bg-white border border-choc-200 text-choc-700 text-xs font-black px-4 py-2 rounded-full shadow-sm">
+      <i data-lucide="cake-slice" class="w-3.5 h-3.5"></i> كيك طازة كل يوم
+    </span>
+    <h1 class="mt-8 text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.25]">
+      كيكة عيدك والفرحك
+      <span class="grad-text block">من غير ما تروحي المحل</span>
+    </h1>
+    <p class="mt-6 text-choc-800/75 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+      شوفي الكيكات والتورتات بالتصميمات، اختاري الشكل والكلام اللي على الكيكة، واختاري عنوان التوصيل — والطلب يوصلك على الواتساب فوراً.
+    </p>
+    <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+      <a href="#products" class="grad-bg text-white font-black px-8 py-4 rounded-2xl shadow-xl shadow-choc-500/30 hover:opacity-90 transition flex items-center gap-2">
+        <i data-lucide="cake" class="w-5 h-5"></i> شوفي الكيكات
+      </a>
+      <a href="#order" class="bg-white border-2 border-choc-300 text-choc-800 font-black px-8 py-4 rounded-2xl hover:border-choc-500 transition flex items-center gap-2">
+        <i data-lucide="message-square" class="w-5 h-5"></i> اطلبي أوردر
+      </a>
+    </div>
+    <div class="mt-14 grid grid-cols-3 gap-6 max-w-2xl mx-auto">
+      <div><p class="text-2xl sm:text-3xl font-black grad-text">+50</p><p class="text-xs sm:text-sm text-choc-700/70 font-semibold">تصميم كيك</p></div>
+      <div><p class="text-2xl sm:text-3xl font-black grad-text">3 ساعات</p><p class="text-xs sm:text-sm text-choc-700/70 font-semibold">تجهيز الأوردر</p></div>
+      <div><p class="text-2xl sm:text-3xl font-black grad-text">توصيل</p><p class="text-xs sm:text-sm text-choc-700/70 font-semibold">لباب البيت</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="py-20 bg-white border-y border-choc-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center reveal">
+      <h2 class="text-3xl sm:text-4xl font-black">الكيكات والتورتات</h2>
+      <p class="mt-4 text-choc-800/70 text-sm sm:text-base">اختاري واضغطي «اطلبي» — والطلب يوصل الواتساب</p>
+      <div class="flex flex-wrap items-center justify-center gap-2 pt-6" id="filters">
+        <button onclick="filterCat('all',this)"   class="filter-btn active px-5 py-2.5 rounded-xl text-sm font-bold bg-white border border-choc-300 text-choc-800">الكل</button>
+        <button onclick="filterCat('cake',this)"  class="filter-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-white border border-choc-300 text-choc-800">كيك أعياد</button>
+        <button onclick="filterCat('tart',this)"  class="filter-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-white border border-choc-300 text-choc-800">تورتات</button>
+        <button onclick="filterCat('cup',this)"   class="filter-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-white border border-choc-300 text-choc-800">كب كيك</button>
+        <button onclick="filterCat('sweet',this)" class="filter-btn px-5 py-2.5 rounded-xl text-sm font-bold bg-white border border-choc-300 text-choc-800">حلويات</button>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-12" id="grid">
+
+      <div class="product card rounded-3xl overflow-hidden group reveal transition duration-300" data-cat="cake">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="كيكة شوكولاتة">
+          <span class="absolute top-4 right-4 bg-white/95 text-choc-600 text-[11px] font-black px-3 py-1 rounded-full">كيك أعياد</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h3 class="text-lg font-black text-choc-900">كيكة الشوكولاتة</h3>
+          <p class="text-xs text-choc-700/75 leading-relaxed">طبقات شوكولاتة كثيفة بصوص الغاناش — الحجم حسب عدد الأفراد.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-choc-100">
+            <span class="text-lg font-black grad-text">يُحدد بالحجز</span>
+            <button onclick="orderItem('كيكة الشوكولاتة')" class="grad-bg text-white font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 hover:opacity-90 transition">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i> اطلبي
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product card rounded-3xl overflow-hidden group reveal transition duration-300" data-cat="cake">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1535254973040-607b4749ce69?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="كيكة فراولة">
+          <span class="absolute top-4 right-4 bg-white/95 text-choc-600 text-[11px] font-black px-3 py-1 rounded-full">كيك أعياد</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h3 class="text-lg font-black text-choc-900">كيكة الفراولة بالكريمة</h3>
+          <p class="text-xs text-choc-700/75 leading-relaxed">كريمة خفيفة وفراولة طازة — مناسبة للفصل والتكريم.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-choc-100">
+            <span class="text-lg font-black grad-text">يُحدد بالحجز</span>
+            <button onclick="orderItem('كيكة الفراولة بالكريمة')" class="grad-bg text-white font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 hover:opacity-90 transition">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i> اطلبي
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product card rounded-3xl overflow-hidden group reveal transition duration-300" data-cat="tart">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="تورت">
+          <span class="absolute top-4 right-4 bg-white/95 text-choc-600 text-[11px] font-black px-3 py-1 rounded-full">تورتات</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h3 class="text-lg font-black text-choc-900">تورت الفواكه</h3>
+          <p class="text-xs text-choc-700/75 leading-relaxed">تورت بالفواكه الموسمية على حسب الطلب — شكل يختلف كل مرة.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-choc-100">
+            <span class="text-lg font-black grad-text">يُحدد بالحجز</span>
+            <button onclick="orderItem('تورت الفواكه')" class="grad-bg text-white font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 hover:opacity-90 transition">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i> اطلبي
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product card rounded-3xl overflow-hidden group reveal transition duration-300" data-cat="tart">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="كيك عيد ميلاد">
+          <span class="absolute top-4 right-4 bg-white/95 text-choc-600 text-[11px] font-black px-3 py-1 rounded-full">تورتات</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h3 class="text-lg font-black text-choc-900">كيكة عيد ميلاد مخصصة</h3>
+          <p class="text-xs text-choc-700/75 leading-relaxed">قولي الاسم والعمر والشخصية المفضلة — وهيتعمل ليها تصميم خاص.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-choc-100">
+            <span class="text-lg font-black grad-text">يُحدد بالحجز</span>
+            <button onclick="orderItem('كيكة عيد ميلاد مخصصة')" class="grad-bg text-white font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 hover:opacity-90 transition">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i> اطلبي
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product card rounded-3xl overflow-hidden group reveal transition duration-300" data-cat="cup">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="كب كيك">
+          <span class="absolute top-4 right-4 bg-white/95 text-choc-600 text-[11px] font-black px-3 py-1 rounded-full">كب كيك</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h3 class="text-lg font-black text-choc-900">علبة كب كيك مشكلة</h3>
+          <p class="text-xs text-choc-700/75 leading-relaxed">6 أو 12 كب كيك بنكهات مختلفة — مثالية للضيافة والهدايا.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-choc-100">
+            <span class="text-lg font-black grad-text">يُحدد بالحجز</span>
+            <button onclick="orderItem('علبة كب كيك مشكلة')" class="grad-bg text-white font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 hover:opacity-90 transition">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i> اطلبي
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product card rounded-3xl overflow-hidden group reveal transition duration-300" data-cat="sweet">
+        <div class="relative h-64 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" alt="حلويات">
+          <span class="absolute top-4 right-4 bg-white/95 text-choc-600 text-[11px] font-black px-3 py-1 rounded-full">حلويات</span>
+        </div>
+        <div class="p-6 space-y-3">
+          <h3 class="text-lg font-black text-choc-900">حلويات شرقية وغربية</h3>
+          <p class="text-xs text-choc-700/75 leading-relaxed">كنافة، بقلاوة، إكلير، وبسبوسة — طازة يوم بيوم.</p>
+          <div class="pt-3 flex items-center justify-between border-t border-choc-100">
+            <span class="text-lg font-black grad-text">يُحدد بالحجز</span>
+            <button onclick="orderItem('حلويات شرقية وغربية')" class="grad-bg text-white font-black px-4 py-2 rounded-xl text-xs flex items-center gap-1.5 hover:opacity-90 transition">
+              <i data-lucide="message-square" class="w-3.5 h-3.5"></i> اطلبي
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ORDER -->
+<section id="order" class="py-20">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+    <div class="text-center">
+      <h2 class="text-3xl sm:text-4xl font-black">اطلبي أوردر</h2>
+      <p class="mt-4 text-choc-800/70 text-sm sm:text-base">املئي البيانات وهنأكد الطلب على الواتساب</p>
+    </div>
+    <form onsubmit="submitOrder(event)" class="mt-10 card rounded-3xl p-7 sm:p-9 space-y-5">
+      <div>
+        <label class="block text-sm font-black text-choc-900 mb-2">الاسم</label>
+        <input id="oName" required placeholder="اسمك الكريم" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500">
+      </div>
+      <div>
+        <label class="block text-sm font-black text-choc-900 mb-2">رقم الواتساب</label>
+        <input id="oPhone" required placeholder="01xxxxxxxxx" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500">
+      </div>
+      <div>
+        <label class="block text-sm font-black text-choc-900 mb-2">المنتج</label>
+        <select id="oItem" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500 bg-white">
+          <option>كيكة الشوكولاتة</option>
+          <option>كيكة الفراولة بالكريمة</option>
+          <option>تورت الفواكه</option>
+          <option>كيكة عيد ميلاد مخصصة</option>
+          <option>علبة كب كيك مشكلة</option>
+          <option>حلويات شرقية وغربية</option>
+        </select>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-black text-choc-900 mb-2">الحجم</label>
+          <select id="oSize" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500 bg-white">
+            <option>صغير (6-8 أفراد)</option>
+            <option>وسط (10-12 فرد)</option>
+            <option>كبير (14+ فرد)</option>
+          </select>
+        </div>
+        <div>
+          <label class="block text-sm font-black text-choc-900 mb-2">الكمية</label>
+          <input id="oQty" value="1" type="number" min="1" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500">
+        </div>
+      </div>
+      <div>
+        <label class="block text-sm font-black text-choc-900 mb-2">الكلام اللي على الكيكة (اختياري)</label>
+        <input id="oText" placeholder="مثال: كل سنة وأنت طيب" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500">
+      </div>
+      <div>
+        <label class="block text-sm font-black text-choc-900 mb-2">عنوان التوصيل</label>
+        <input id="oAddress" required placeholder="الشارع والعمارة والعلامة المميزة" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500">
+      </div>
+      <div>
+        <label class="block text-sm font-black text-choc-900 mb-2">معاد الاستلام</label>
+        <input id="oTime" required placeholder="بكرة 5 مساءً" class="w-full border border-choc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-choc-500">
+      </div>
+      <button type="submit" class="w-full grad-bg text-white font-black py-4 rounded-2xl text-base shadow-xl shadow-choc-500/30 hover:opacity-90 transition flex items-center justify-center gap-2">
+        <i data-lucide="send" class="w-5 h-5"></i> ابعتي الطلب
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<footer id="contact" class="py-16 bg-choc-900 text-choc-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+    <div class="flex items-center justify-center gap-3">
+      <div class="w-12 h-12 rounded-2xl grad-bg grid place-items-center"><span class="text-white font-black text-2xl">ك</span></div>
+      <span class="text-2xl font-black">كيكة وتورت</span>
+    </div>
+    <p class="text-sm text-choc-200/80 max-w-md mx-auto">للاستفسار أو الطلب المباشر — راسيلنا على الواتساب.</p>
+    <button onclick="wa('استفسار عن كيكات وتورتات')" class="grad-bg text-white font-black px-8 py-3.5 rounded-2xl inline-flex items-center gap-2 hover:opacity-90 transition">
+      <i data-lucide="message-circle" class="w-5 h-5"></i> كلميناة واتساب
+    </button>
+    <p class="text-xs text-choc-300/60 pt-4">© <span id="yr"></span> كيكة وتورت — جميع الحقوق محفوظة</p>
+  </div>
+</footer>
+
+<button onclick="wa('استفسار عن كيكات وتورتات')" class="fixed bottom-6 left-6 z-40 w-14 h-14 rounded-full grad-bg grid place-items-center shadow-2xl shadow-choc-500/40 hover:scale-110 transition">
+  <i data-lucide="message-circle" class="w-7 h-7 text-white"></i>
+</button>
+
+<script>
+  const PHONE = "201067867769";
+  lucide.createIcons();
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  function wa(text){
+    window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`, '_blank');
+  }
+
+  function orderItem(name){
+    document.getElementById('oItem').value = name;
+    document.getElementById('order').scrollIntoView({behavior:'smooth'});
+    wa(`السلام عليكم، عايزة أطلب (${name}).`);
+  }
+
+  function filterCat(cat, btn){
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.product').forEach(p=>{
+      p.style.display = (cat === 'all' || p.dataset.cat === cat) ? 'block' : 'none';
+    });
+  }
+
+  function submitOrder(e){
+    e.preventDefault();
+    const name    = document.getElementById('oName').value.trim();
+    const phone   = document.getElementById('oPhone').value.trim();
+    const item    = document.getElementById('oItem').value;
+    const size    = document.getElementById('oSize').value;
+    const qty     = document.getElementById('oQty').value.trim();
+    const text    = document.getElementById('oText').value.trim();
+    const address = document.getElementById('oAddress').value.trim();
+    const time    = document.getElementById('oTime').value.trim();
+
+    const msg =
+      `طلب أوردر — كيكة وتورت\n` +
+      `------------------------\n` +
+      `الاسم: ${name}\n` +
+      `واتساب: ${phone}\n` +
+      `المنتج: ${item}\n` +
+      `الحجم: ${size}\n` +
+      `الكمية: ${qty}\n` +
+      (text ? `الكلام على الكيكة: ${text}\n` : ``) +
+      `عنوان التوصيل: ${address}\n` +
+      `معاد الاستلام: ${time}\n` +
+      `------------------------\n` +
+      `في انتظار تأكيد الطلب`;
+
+    wa(msg);
+  }
+
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(en=>{ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target);} });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', ()=> nav.classList.toggle('shadow-lg', window.scrollY > 40));
+</script>
+</body>
+</html>
